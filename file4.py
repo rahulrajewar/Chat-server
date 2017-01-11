@@ -1,6 +1,7 @@
+#client.py
 import socket
+#socket created s1
 s1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 def main():
     serveraddress = ('192.168.0.16' , 2000)
     s1.connect(serveraddress)

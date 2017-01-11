@@ -1,11 +1,16 @@
+#server.py
 import socket
+#let's create a socket first
 s1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 def main():
-    hostname = socket.gethostname()
+    hostname = socket.gethostname() 
+    '''this will assign a string to hostname variable which will contain the hostname of 
+    the machine where python interpretor is currently executing.'''
     serveraddress = (hostname, 2000)
     s1.bind(serveraddress)
     print('socket created at', serveraddress)
     s1.listen(1)
+    print('server listening')
     connection, address = s1.accept()
     print('connecting with: ', address)
     while True:
