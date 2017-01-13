@@ -1,4 +1,5 @@
 #server.py
+#Modifications made 
 import socket
 #let's create a socket first
 s1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
